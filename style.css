@@ -1,0 +1,153 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;  
+}
+
+body {
+  background-image: linear-gradient(to right,#20d462, #20d4c2);
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/2;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 30px;
+  }
+
+  header img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  header a {
+    text-decoration: none;
+  }
+
+  #pageTitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+    color: white;
+    text-shadow: grey 1px 1px 4px;
+  }
+
+/* map style  */
+  svg {
+    pointer-events: all;
+    fill:rgb(8, 71, 8);
+    max-width: 400px; 
+  }
+
+  #estados {
+    fill: white;
+  }
+
+  #brasil {
+    opacity: 0.5;
+  }
+
+  #southeast:hover, #north:hover, #south:hover, #northeast:hover, #centralWest:hover {
+    fill: rgb(26, 180, 26);
+    cursor: pointer;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+  }
+
+  #regionTitle {
+    color:white;
+    max-width: max-content;
+    margin: auto;
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-shadow: grey 1px 1px 4px;
+  }
+  .information {
+    padding:40px 30px 0;
+    color:white;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;
+  }
+
+  #callToAction {
+    font-weight: bold;
+}
+
+#stateTable {
+  box-shadow:green 1px 1px 5px;
+  border-radius: 10px;
+  margin-top: 30px;
+  display: none;
+}
+
+#stateTable th {
+  width: 300px;
+  padding: 10px;
+  background-color: rgba(32, 212, 194,0.2);
+}
+
+#stateTable tr {
+  text-align: center;
+  padding: 10 px;
+}
+
+#stateTable tr:nth-child(even) {
+  background-color: rgba(242, 242, 242, 0.2);
+}
+
+.containerButton {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#buttonHome {
+  padding: 8px 20px;
+  margin: 30px 0;
+  border: solid white 1px;
+  border-radius: 20px;
+  background-color: transparent;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  display: none;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#buttonHome:hover {
+  color:#20d462;
+  background-color:white;
+}
+
+footer{
+  padding-left: 30px;
+}
+footer a{
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  
+}
+
+
+@media (min-width:768px){
+  main {
+    grid-template-columns: 50% 50%;
+  }
+  header {
+    grid-column: 1/3;
+  }
+}
